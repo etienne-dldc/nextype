@@ -3582,10 +3582,12 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zenjson@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/zenjson/-/zenjson-1.0.2.tgz#235021315fda78a554aa76cc171a78c7241d1e4f"
-  integrity sha512-mJ2K+tdEcutqDu+BH7susgIlT6JhVxZVRDH8ctBDipwS/SkLE9FmcFiMbiMlVH4Pm8ooPBL/E6LF693n65zjQQ==
+zenjson@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/zenjson/-/zenjson-1.0.3.tgz#3abad988eaac25dbfefc73c8cab3019be91761f6"
+  integrity sha512-/Fkeb9O5rJUf/0ZRXiX2wYUizrTuIvGJJK1EF6YMOknXtUj/lI4ahjCYkgk7sTHSGRglNtS4TaWZ3Lti0r1lRA==
+  dependencies:
+    tsup "^5.11.11"
 
 zod@^3.11.6:
   version "3.11.6"
