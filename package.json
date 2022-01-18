@@ -15,15 +15,15 @@
   "author": "Etienne Dldc <e.deladonchamps@gmail.com>",
   "sideEffects": false,
   "exports": {
-    "client": {
+    "./client": {
       "import": "./client.mjs",
       "require": "./client.js"
     },
-    "server": {
+    "./server": {
       "import": "./server.mjs",
       "require": "./server.js"
     },
-    "shared": {
+    "./shared": {
       "import": "./shared.mjs",
       "require": "./shared.js"
     }
