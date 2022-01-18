@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Utility tool for NextJS",
   "keywords": [],
+  "homepage": "https://github.com/etienne-dldc/nextype#readme",
+  "bugs": {
+    "url": "https://github.com/etienne-dldc/nextype/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etienne-dldc/nextype.git"
+  },
   "license": "MIT",
   "author": "Etienne Dldc <e.deladonchamps@gmail.com>",
   "sideEffects": false,
