@@ -16,21 +16,21 @@
   "sideEffects": false,
   "exports": {
     "client": {
-      "import": "./dist/client.js",
-      "require": "./dist/client.cjs.js"
+      "import": "./client.mjs",
+      "require": "./client.js"
     },
     "server": {
-      "import": "./dist/server.js",
-      "require": "./dist/server.cjs.js"
+      "import": "./server.mjs",
+      "require": "./server.js"
     },
     "shared": {
-      "import": "./dist/shared.js",
-      "require": "./dist/shared.cjs.js"
+      "import": "./shared.mjs",
+      "require": "./shared.js"
     }
   },
-  "main": "./dist/shared.cjs.js",
-  "module": "./dist/shared.js",
-  "types": "./dist/shared.d.ts",
+  "main": "./shared.js",
+  "module": "./shared.mjs",
+  "types": "./shared.d.ts",
   "files": [
     "dist"
   ],
