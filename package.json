@@ -32,7 +32,16 @@
   "module": "./shared.mjs",
   "types": "./shared.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "client.d.ts",
+    "client.js",
+    "client.mjs",
+    "server.d.ts",
+    "server.js",
+    "server.mjs",
+    "shared.d.ts",
+    "shared.js",
+    "shared.mjs"
   ],
   "scripts": {
     "build": "tsup --format cjs,esm src/client.ts src/server.ts src/shared.ts --dts src/client.ts --dts src/server.ts --dts src/shared.ts --clean --splitting",
