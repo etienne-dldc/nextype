@@ -1,6 +1,6 @@
 import { createKey } from 'miid';
 import * as zenjson from 'zenjson';
-import { dynamicMiddleware } from '.';
+import { dynamicMiddleware } from '../server';
 import { ApiResponse } from './ApiResponse';
 import { BaseResponse } from './BaseResponse';
 import { Context } from './Context';

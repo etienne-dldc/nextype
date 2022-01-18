@@ -16,26 +16,26 @@
   "sideEffects": false,
   "exports": {
     "client": {
-      "import": "./dist/client/index.js",
-      "require": "./dist/client/index.cjs.js"
+      "import": "./dist/client.js",
+      "require": "./dist/client.cjs.js"
     },
     "server": {
-      "import": "./dist/server/index.js",
-      "require": "./dist/server/index.cjs.js"
+      "import": "./dist/server.js",
+      "require": "./dist/server.cjs.js"
     },
     "shared": {
-      "import": "./dist/shared/index.js",
-      "require": "./dist/shared/index.cjs.js"
+      "import": "./dist/shared.js",
+      "require": "./dist/shared.cjs.js"
     }
   },
-  "main": "./dist/shared/index.cjs.js",
-  "module": "./dist/shared/index.js",
-  "types": "./dist/shared/index.d.ts",
+  "main": "./dist/shared.cjs.js",
+  "module": "./dist/shared.js",
+  "types": "./dist/shared.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup --format cjs,esm src/client/index.ts src/server/index.ts src/shared/index.ts --dts src/client/index.ts --dts src/server/index.ts --dts src/shared/index.ts --clean --splitting",
+    "build": "tsup --format cjs,esm src/client.ts src/server.ts src/shared.ts --dts src/client.ts --dts src/server.ts --dts src/shared.ts --clean --splitting",
     "lint": "prettier . --check && eslint . && tsc --noEmit",
     "lint:fix": "prettier . --write . && eslint . --fix",
     "release": "yarn build && np",
