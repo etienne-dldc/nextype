@@ -83,6 +83,9 @@ export function createRpcFetcher<Routes extends RpcRoutesAny>({
       throw new ApiError(restore(await res.json()) as any);
     } catch (error) {
       console.error(error);
+      if (error instanceof ApiError) {
+        throw error;
+      }
       if (error instanceof Error) {
         throw new ApiError({ type: 'NetworkError', error });
       }
