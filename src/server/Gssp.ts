@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { ApiError } from '../shared';
 import { ALL_HTTP_METHODS, Context, HttpMethod } from './Context';
+import { GsspResponse } from './GsspResponse';
 import { composeGssp, GsspMiddleware } from './Middleware';
 
 export function createGssp(...middlewares: Array<GsspMiddleware | null>): GetServerSideProps {
@@ -21,8 +22,8 @@ export function createGssp(...middlewares: Array<GsspMiddleware | null>): GetSer
       body: context.params,
       query: context.query,
     });
-    const result = await rootMid(ctx, () => {
-      throw new ApiError({ type: 'ApiDidNotRespond' });
+    const result = await rootMid(ctx, async () => {
+      return GsspResponse.create({ props: {} });
     });
     if (result.status) {
       context.res.statusCode = result.status;
