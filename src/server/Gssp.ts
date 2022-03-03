@@ -22,9 +22,18 @@ export function createGssp(...middlewares: Array<GsspMiddleware | null>): GetSer
       body: context.params,
       query: context.query,
     });
-    const result = await rootMid(ctx, async () => {
-      return GsspResponse.create({ props: {} });
-    });
+    const result = await (async () => {
+      try {
+        return await rootMid(ctx, async () => {
+          return GsspResponse.create({ props: {} });
+        });
+      } catch (error) {
+        if (error instanceof GsspResponse) {
+          return error;
+        }
+        throw error;
+      }
+    })();
     if (result.status) {
       context.res.statusCode = result.status;
     }
